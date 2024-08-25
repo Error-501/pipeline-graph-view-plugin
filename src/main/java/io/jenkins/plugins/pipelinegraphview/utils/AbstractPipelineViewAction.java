@@ -33,6 +33,10 @@ public abstract class AbstractPipelineViewAction implements Action, IconSpec {
         return run.getParent().isBuildable();
     }
 
+    public boolean isParameterized() {
+        return run.getParent().isParameterized();
+    }
+
     public Permission getPermission() {
         return run.getParent().BUILD;
     }
